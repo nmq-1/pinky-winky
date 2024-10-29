@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #fbcbdb;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .background-text {
+            font-size: 100px;
+            color: rgba(156, 17, 93, 0.1); /* نفس لون الأزرار بشفافية */
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            z-index: -1;
+            animation: float 4s ease-in-out infinite; /* حركة الصعود والهبوط */
+        }
+
+        /* تعريف الحركة */
+        @keyframes float {
+            0%, 100% {
+                transform: translate(-50%, -50%) translateY(-10px);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(10px);
+            }
+        }
+        
+        img {
+            width: 150px;
+            margin-top: 20px;
+        }
+        
+        button {
+            display: block;
+            width: 200px;
+            padding: 15px;
+            margin: 10px auto;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #9c115d;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        button:hover {
+            background-color: #a62171;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #a62171;
+        }
+        
+        .footer {
+            font-size: 0.8em;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-text">PINKY WINKY SHOP</div>
+    
+    <img src="data:image/jpeg;base64,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" alt="شعار المتجر">
+    
+    <div>
+        <button onclick="window.location.href='https://pinkywinshoponline.com/ar'">المتجر الإلكتروني</button>
+        <button onclick="window.location.href='mailto:pinkywinky973@gmail.com'">الاقتراحات والملاحظات</button>
+    </div>
+    
+    <div class="social-icons">
+        <a href="https://www.instagram.com/Pinky_winkyshop" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://2u.pw/b2wWNHg5" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@pinky_winkyshop" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    
+    <div class="footer">
+       شكراً لزيارتكم
+    </div>
+</body>
+</html>
